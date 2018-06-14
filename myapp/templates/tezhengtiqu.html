@@ -1,0 +1,52 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特征提取</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    
+</head>
+<body>
+    <div class="row justify-content-center mb-5 title">
+        <div class="col-md-6 text-center mb-5 probootstrap-animate">
+            <div class="a1"><a href="/">《返回首页</a></div>
+            <h2>特征提取</h2>
+        </div>
+    </div>
+    <section class="probootstrap_section" id="section-feature">
+        <div class="container">        
+            <div class="row">                         
+                <div class="col-md-12 col-sm-6 probootstrap-animate">
+                    <form action="/login/" method="post" enctype="multipart/form-data">
+                        {%csrf_token%}
+                        <p class="p2">
+                            <span class="inp1">
+                                <i class="icon iconfont">&#xe665;</i><br>
+                                <span>请选择您的图片</span>
+                            </span>
+                            <input class="inp2" type='file' name="file1"  onchange="img.src=this.value"/>
+                        </p>
+                        <p class="p2">
+                            <span class="inp1">
+                                <i class="icon iconfont">&#xe665;</i><br>
+                                <span>请选择您的图片</span>
+                            </span>
+                            <input class="inp2" type='file' name="file2"  onchange="img.src=this.value"/>
+                        </p>
+                        <p class="p1">
+                            <input type="submit" value="开始分析" class="cccc">
+                        </p>
+                    </form>
+                    <div class="ccc">
+                        <img src="{{img_url}}" height="200">
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+</body>
+</html>
